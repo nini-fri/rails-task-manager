@@ -1,0 +1,11 @@
+<!-- app/views/tasks/index.html.erb -->
+
+<h1>My tasks</h1>
+<% @tasks.each do |task| %>
+  <div>
+    <%= check_box_tag "tasks[]", task.id, task.completed %>
+    <%= link_to task.title, task_path(task) %>
+  </div>
+<% end %>
+
+<%= link_to "+ Add a new task", new_task_path, class: "new-task-link" %>

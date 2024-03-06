@@ -1,0 +1,18 @@
+<!-- app/views/tasks/new.html.erb -->
+<!-- app/views/tasks/new.html.erb -->
+
+<%= form_with model: @task, local: true do |form| %>
+  <div>
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div>
+    <%= form.label :description %>
+    <%= form.text_area :description %>
+  </div>
+
+  <div>
+    <%= form.submit "Add Task" %>
+  </div>
+<% end %>
